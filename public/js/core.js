@@ -1,2 +1,2 @@
-//for module maheshTodo, todoController, todoservice and angular-responsive are all dependencies.
-angular.module('maheshTodo', ['todoController', 'todoService','angular-responsive']);
+//for module maheshTodo, todoModule, todoservice and angular-responsive are all dependencies.
+angular.module('maheshTodo', ['todoModule', 'todoService','angular-responsive']);

@@ -1,4 +1,4 @@
-angular.module('todoController', [])
+angular.module('todoModule', [])
 
 	// inject the Todo service factory into our controller
 	//$scope,is added for dealing with mimification.
