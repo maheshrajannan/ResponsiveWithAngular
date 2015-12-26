@@ -1,14 +1,15 @@
 angular.module('todoController', [])
 
 	// inject the Todo service factory into our controller
-	.controller('mainController', ['$scope','$http','Todos', function($scope, $http, Todos) {
+	//$scope,is added for dealing with mimification.
+	.controller('mainController', ['$scope','$http','TodosFactory', function($scope, $http, TodosFactory) {
 		$scope.formData = {};
 		$scope.loading = true;
 
 		// GET =====================================================================
 		// when landing on the page, get all todos and show them
 		// use the service to get all the todos
-		Todos.get()
+		TodosFactory.get()
 			.success(function(data) {
 				$scope.todos = data;
 				$scope.loading = false;
@@ -24,7 +25,7 @@ angular.module('todoController', [])
 				$scope.loading = true;
 
 				// call the create function from our service (returns a promise object)
-				Todos.create($scope.formData)
+				TodosFactory.create($scope.formData)
 
 					// if successful creation, call our get function to get all the new todos
 					.success(function(data) {
@@ -40,7 +41,7 @@ angular.module('todoController', [])
 		$scope.deleteTodo = function(id) {
 			$scope.loading = true;
 
-			Todos.delete(id)
+			TodosFactory.delete(id)
 				// if successful creation, call our get function to get all the new todos
 				.success(function(data) {
 					$scope.loading = false;
