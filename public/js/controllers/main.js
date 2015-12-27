@@ -2,7 +2,7 @@ angular.module('todoModule', [])
 
 	// inject the Todo service factory into our controller
 	//$scope,is added for dealing with mimification.
-	.controller('mainController', ['$scope','$http','TodosFactory', function($scope, $http, TodosFactory) {
+	.controller('todoController', ['$scope','$http','TodosFactory', function($scope, $http, TodosFactory) {
 		$scope.formData = {};
 		$scope.loading = true;
 
