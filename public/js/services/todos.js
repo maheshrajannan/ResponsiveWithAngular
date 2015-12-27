@@ -1,4 +1,4 @@
-angular.module('todoService', [])
+angular.module('todosFactoryModule', [])
 
 	// super simple service
 	// each function returns a promise object 
